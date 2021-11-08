@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+		function imprimeDatosTotal(){ 
+   			document.write("<br><br>C&oacute;digo: " + this.codigo);
+   			document.write("<br>Nombre: " + this.nombre);
+   			document.write("<br>Precio: " + this.precio);
+		}
+
+		function ProductosAlimenticios(codigo_in, nombre_in, precio_in){ 
+   			this.codigo = codigo_in;
+   			this.nombre = nombre_in;
+			this.precio = precio_in;
+   			this.imprimeDatos = imprimeDatosTotal; 
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var producto1 = new ProductosAlimenticios("1","Arroz", "10.50");
+		var producto2 = new ProductosAlimenticios("2","Leche", "1.50");
+		var producto3 = new ProductosAlimenticios("3","Gatorade", "1.30");
+		
+		var productos = new Array(producto1, producto2, producto3);
+		for(i=0; i<productos.length; i++){
+			productos[i].imprimeDatos();
+		}
+	</script>
+</body>
+</html>
+
+	
